@@ -43,3 +43,31 @@ app = Flask(__name__)
 
         if __name__=="__main__":
             app.run(debug=True)
+
+
+################################ Introduce HTML templates ####################
+
+
+Step 1- Now add another import with flask render_templates
+
+            from flask import Flask, render_template
+
+
+Step 2- change return statement with
+
+            return  render_template('index.html')
+
+Step 3- Create a folder name with templates make sure name matches
+
+            now create a file name index.html
+
+            <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>HCL Technologies</title>
+                </head>
+                <body>
+                    <h2> Welcome to HCL</h2>
+                </body>
+                </html>
