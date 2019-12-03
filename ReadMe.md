@@ -1,51 +1,36 @@
+
+
+1. Run command pip install -r requirement.txt
+
+2. Create a package to make project modular or we can create startup project by create a file name as main.py in base project only.1
+
+3. Import Flask using below import
 ```python
-Step 1- Check out project from git in to Pycharm.1
-
-Step 2- run command pip install -r requirement.txt
-
-Step 3- Create a package to make project moduler or we can create startup project by create a file name as main
-        .py in base project only.1
-
-Step 4- Import Flask using below import
-
         from flask import Flask
-
-Step 5- Initialize app
-
+```
+4. Initialize app
+```python
             app = Flask(__name__)
-
-Step 6- create a route for the url.
-
+```
+5. Create a route for the url.
+```python
         @app.route('/')
             def index():
             return  'This is home page'
+```
+6. Add app.run() to run the application , user Debug=True for hot deployment otherwise we need to restart the server each time.
 
-Step 7 - add app.run() to run the application , user Debug=True for hot deployment otherwise we need to restart the server each time.
-
-Step 8 - use below command to run the base app-
-
+7. use below command to run the base app-
+```
            cd employeedetail
            python main.py
+```
+8. Access application on port 5000
 
-Step 9- Access application on port 5000
-
-Ref- full main.py code
-
-        from flask import Flask
-
-app = Flask(__name__)
+Ref- full [main.py](https://github.com/priyankitshukla/pythonmicroservice/blob/master/employeedetail/main.py)
 
 
-        @app.route('/')
-            def index():
-                return  'This is home page'
-
-
-        if __name__=="__main__":
-            app.run(debug=True)
-
-
-################################ Introduce HTML templates ####################
+## ############################## Introduce HTML templates ####################
 
 
 Step 1- Now add another import with flask render_templates
